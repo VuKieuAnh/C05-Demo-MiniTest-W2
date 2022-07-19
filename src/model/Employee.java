@@ -1,11 +1,34 @@
 package model;
 
-public abstract class Employee {
+public abstract class Employee implements Comparable<Employee> {
     private String id;
     private String fullName;
     private int age;
     private String phone;
     private String email;
+    private int height;
+    private int weight;
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.getAge() - o.getAge();
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 
     public abstract float getSalary();
 

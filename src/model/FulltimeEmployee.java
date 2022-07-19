@@ -56,7 +56,7 @@ public class FulltimeEmployee extends Employee {
         return "model.FulltimeEmployee{" +
                 "bonus=" + bonus +
                 ", fines=" + fines +
-                ", salary=" + netSalary +
-                '}';
+                ", salary=" + netSalary + "height"+
+                this.getHeight() +"age" + this.getAge()+ '}';
     }
 }
