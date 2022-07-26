@@ -1,6 +1,8 @@
 package model;
 
-public abstract class Employee implements Comparable<Employee> {
+import java.io.Serializable;
+
+public abstract class Employee implements Comparable<Employee>, Serializable {
     private String id;
     private String fullName;
     private int age;

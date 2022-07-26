@@ -3,11 +3,13 @@ package controller;
 import model.Employee;
 import model.FulltimeEmployee;
 import model.ParttimeEmployee;
+import storage.EmployeeFile;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeeManager {
-    public static ArrayList<Employee> employees = new ArrayList<>();
+    public static List<Employee> employees = EmployeeFile.readFile();
 
 //    1. Lay ra luong trung binh cua cong ty
     public float getAverageSalary(){
@@ -34,5 +36,6 @@ public class EmployeeManager {
 //    3. Them moi nhan vien fulltime
     public void addNewEmployee(Employee employee){
         employees.add(employee);
+        EmployeeFile.writeFile(employees);
     }
 }

@@ -6,10 +6,11 @@ import model.FulltimeEmployee;
 import model.ParttimeEmployee;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Client {
-    private static ArrayList<Employee> employees = EmployeeManager.employees;
+    private static List<Employee> employees = EmployeeManager.employees;
     static {
 //        FulltimeEmployee b1 = new FulltimeEmployee(100, 0, 10000);
 //        FulltimeEmployee b2 = new FulltimeEmployee(10, 50, 20000);
@@ -23,11 +24,11 @@ public class Client {
     public static void main(String[] args) {
         System.out.println(employees);
         EmployeeManager ka = new EmployeeManager();
-//        System.out.println(ka.getAverageSalary());
+////        System.out.println(ka.getAverageSalary());
+////
+////        EmployeeManager quan = new EmployeeManager();
+////        System.out.println(quan.getAverageSalary());
 //
-//        EmployeeManager quan = new EmployeeManager();
-//        System.out.println(quan.getAverageSalary());
-
         ka.addNewEmployee(newE());
         System.out.println(employees);
     }
